@@ -1,15 +1,16 @@
 //
-//  CocoaHeadsTestingPresentationTests.swift
-//  CocoaHeadsTestingPresentationTests
+//  Testable_SwiftTests.swift
+//  Testable SwiftTests
 //
-//  Created by Andy Obusek on 5/10/16.
-//  Copyright © 2016 Clean Swifter. All rights reserved.
-//
+//  Created by Jim Puls on 10/29/14.
+//  Licensed to Square, Inc. under one or more contributor license agreements.
+//  See the LICENSE file distributed with this work for the terms under
+//  which Square, Inc. licenses this file to you.
 
+import UIKit
 import XCTest
-@testable import CocoaHeadsTestingPresentation
 
-class CocoaHeadsTestingPresentationTests: XCTestCase {
+class Testable_SwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +24,12 @@ class CocoaHeadsTestingPresentationTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }

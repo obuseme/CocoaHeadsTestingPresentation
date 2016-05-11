@@ -5,6 +5,64 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3D7F1CE2C1930094C227"
+               BuildableName = "CocoaHeadsTestingPresentation.app"
+               BlueprintName = "CocoaHeadsTestingPresentation"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3D931CE2C1930094C227"
+               BuildableName = "CocoaHeadsTestingPresentationTests.xctest"
+               BlueprintName = "CocoaHeadsTestingPresentationTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3DA61CE2C2290094C227"
+               BuildableName = "UserInterfaceTests.xctest"
+               BlueprintName = "UserInterfaceTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3DB41CE2C2320094C227"
+               BuildableName = "SnapshotTests.xctest"
+               BlueprintName = "SnapshotTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +70,46 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3D931CE2C1930094C227"
+               BuildableName = "CocoaHeadsTestingPresentationTests.xctest"
+               BlueprintName = "CocoaHeadsTestingPresentationTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3DA61CE2C2290094C227"
+               BuildableName = "UserInterfaceTests.xctest"
+               BlueprintName = "UserInterfaceTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "418B3DB41CE2C2320094C227"
+               BuildableName = "SnapshotTests.xctest"
+               BlueprintName = "SnapshotTests"
+               ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "418B3D7F1CE2C1930094C227"
+            BuildableName = "CocoaHeadsTestingPresentation.app"
+            BlueprintName = "CocoaHeadsTestingPresentation"
+            ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +123,23 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "418B3D7F1CE2C1930094C227"
+            BuildableName = "CocoaHeadsTestingPresentation.app"
+            BlueprintName = "CocoaHeadsTestingPresentation"
+            ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "FB_REFERENCE_IMAGE_DIR"
+            value = "$(SOURCE_ROOT)/SnapshotTests/ReferenceImages"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +149,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "418B3D7F1CE2C1930094C227"
+            BuildableName = "CocoaHeadsTestingPresentation.app"
+            BlueprintName = "CocoaHeadsTestingPresentation"
+            ReferencedContainer = "container:CocoaHeadsTestingPresentation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

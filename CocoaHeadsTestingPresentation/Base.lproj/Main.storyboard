@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CocoaHeadsTestingPresentation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Test-O-Rama!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5q-PA-heQ">
+                                <rect key="frame" x="198" y="20" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-X4-yMd">
+                                <rect key="frame" x="26" y="70" width="550" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Name field"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkF-fl-LfZ">
+                                <rect key="frame" x="235" y="116" width="131" height="30"/>
+                                <state key="normal" title="Save, and continue"/>
+                                <connections>
+                                    <segue destination="nJc-RS-ruW" kind="showDetail" identifier="saveAndContinueSegue" id="RhY-qy-zMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-cK-7FV">
+                                <rect key="frame" x="215" y="220" width="170" height="30"/>
+                                <state key="normal" title="Continue, without saving">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nJc-RS-ruW" kind="showDetail" identifier="continueWithoutSavingSegue" id="8II-9u-JtC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qic-cK-7FV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rz9-77-tC8"/>
+                            <constraint firstItem="WOC-X4-yMd" firstAttribute="top" secondItem="S5q-PA-heQ" secondAttribute="bottom" constant="29" id="ULi-Uo-3Zf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WOC-X4-yMd" secondAttribute="trailing" constant="4" id="aAn-K0-5bz"/>
+                            <constraint firstItem="Qic-cK-7FV" firstAttribute="top" secondItem="NkF-fl-LfZ" secondAttribute="bottom" constant="74" id="aN2-ub-gOQ"/>
+                            <constraint firstItem="NkF-fl-LfZ" firstAttribute="centerX" secondItem="WOC-X4-yMd" secondAttribute="centerX" id="ju3-pG-ASr"/>
+                            <constraint firstItem="S5q-PA-heQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k2x-ps-eWt"/>
+                            <constraint firstItem="NkF-fl-LfZ" firstAttribute="top" secondItem="WOC-X4-yMd" secondAttribute="bottom" constant="16" id="nmE-G0-gkv"/>
+                            <constraint firstItem="WOC-X4-yMd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="nqr-mY-Hkr"/>
+                            <constraint firstItem="S5q-PA-heQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rZl-df-tV7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="WOC-X4-yMd" id="G70-Qg-45o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="265" y="429"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="jT3-aO-ibh">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="nJc-RS-ruW" customClass="WelcomeViewController" customModule="CocoaHeadsTestingPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bmv-Ft-xQa"/>
+                        <viewControllerLayoutGuide type="bottom" id="or5-Bx-1fY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgA-a9-zMu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Test-O-Rama!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ub-dj-2Qg">
+                                <rect key="frame" x="198" y="28" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready Player 1?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEl-v8-GAx">
+                                <rect key="frame" x="211" y="71" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twt-v1-1sm">
+                                <rect key="frame" x="265" y="538" width="71" height="30"/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="startOverAction:" destination="nJc-RS-ruW" eventType="touchUpInside" id="q2Y-v3-Pxh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="or5-Bx-1fY" firstAttribute="top" secondItem="Twt-v1-1sm" secondAttribute="bottom" constant="32" id="2Ql-7j-l5S"/>
+                            <constraint firstItem="3Ub-dj-2Qg" firstAttribute="centerX" secondItem="zgA-a9-zMu" secondAttribute="centerX" id="4QW-a1-Jz3"/>
+                            <constraint firstItem="IEl-v8-GAx" firstAttribute="centerX" secondItem="zgA-a9-zMu" secondAttribute="centerX" id="MuX-xI-vlO"/>
+                            <constraint firstItem="Twt-v1-1sm" firstAttribute="centerX" secondItem="zgA-a9-zMu" secondAttribute="centerX" id="a4u-Ej-k3t"/>
+                            <constraint firstItem="IEl-v8-GAx" firstAttribute="top" secondItem="3Ub-dj-2Qg" secondAttribute="bottom" constant="22" id="jkc-YS-tDz"/>
+                            <constraint firstItem="3Ub-dj-2Qg" firstAttribute="top" secondItem="Bmv-Ft-xQa" secondAttribute="bottom" constant="8" id="oJS-o7-5pf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="IEl-v8-GAx" id="KrJ-S4-VWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4Q-FA-fp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8II-9u-JtC"/>
+    </inferredMetricsTieBreakers>
 </document>
