@@ -16,6 +16,9 @@
 		418B3DC31CE2C4630094C227 /* KIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418B3DC21CE2C4630094C227 /* KIF.framework */; };
 		418B3DC51CE2C4C50094C227 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3DC41CE2C4C50094C227 /* WelcomeViewController.swift */; };
 		418B3DCB1CE2C7C20094C227 /* KIF+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3DCA1CE2C7C20094C227 /* KIF+Swift.swift */; };
+		41B618A21CE4087A007877C5 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B618A11CE4087A007877C5 /* WelcomeViewControllerTests.swift */; };
+		41B618A41CE40B82007877C5 /* WelcomeScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B618A31CE40B82007877C5 /* WelcomeScreenTests.swift */; };
+		41B618A61CE414D7007877C5 /* WelcomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B618A51CE414D7007877C5 /* WelcomeViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		418B3DC41CE2C4C50094C227 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		418B3DC61CE2C79A0094C227 /* UserInterfaceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserInterfaceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		418B3DCA1CE2C7C20094C227 /* KIF+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Swift.swift"; sourceTree = "<group>"; };
+		41B618A11CE4087A007877C5 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		41B618A31CE40B82007877C5 /* WelcomeScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenTests.swift; sourceTree = "<group>"; };
+		41B618A51CE414D7007877C5 /* WelcomeViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				418B3D9A1CE2C1930094C227 /* Info.plist */,
+				41B618A11CE4087A007877C5 /* WelcomeViewControllerTests.swift */,
 			);
 			path = CocoaHeadsTestingPresentationTests;
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 				418B3DAB1CE2C2290094C227 /* Info.plist */,
 				418B3DC61CE2C79A0094C227 /* UserInterfaceTests-Bridging-Header.h */,
 				418B3DCA1CE2C7C20094C227 /* KIF+Swift.swift */,
+				41B618A31CE40B82007877C5 /* WelcomeScreenTests.swift */,
 			);
 			path = UserInterfaceTests;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				418B3DB91CE2C2330094C227 /* Info.plist */,
+				41B618A51CE414D7007877C5 /* WelcomeViewTests.swift */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B618A21CE4087A007877C5 /* WelcomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B618A41CE40B82007877C5 /* WelcomeScreenTests.swift in Sources */,
 				418B3DCB1CE2C7C20094C227 /* KIF+Swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B618A61CE414D7007877C5 /* WelcomeViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,10 +546,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CocoaHeadsTestingPresentationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleanswifter.CocoaHeadsTestingPresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CocoaHeadsTestingPresentation.app/CocoaHeadsTestingPresentation";
 			};
 			name = Debug;
@@ -546,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CocoaHeadsTestingPresentationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleanswifter.CocoaHeadsTestingPresentationTests;
@@ -595,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -603,6 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleanswifter.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CocoaHeadsTestingPresentation.app/CocoaHeadsTestingPresentation";
 			};
 			name = Debug;
@@ -611,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -642,6 +660,7 @@
 				418B3D9F1CE2C1930094C227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418B3DA01CE2C1930094C227 /* Build configuration list for PBXNativeTarget "CocoaHeadsTestingPresentationTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +669,7 @@
 				418B3DA21CE2C1930094C227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418B3DAE1CE2C2290094C227 /* Build configuration list for PBXNativeTarget "UserInterfaceTests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +678,7 @@
 				418B3DB01CE2C2290094C227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418B3DBC1CE2C2330094C227 /* Build configuration list for PBXNativeTarget "SnapshotTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +687,7 @@
 				418B3DBE1CE2C2330094C227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
