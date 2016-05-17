@@ -11,4 +11,16 @@ import FBSnapshotTestCase
 
 class WelcomeViewTests: FBSnapshotTestCase {
 
+    override func setUp() {
+        super.setUp()
+//        recordMode = true
+        deviceAgnostic = true
+    }
+
+    func testWelcomeView_ShowsName_WhenLongName() {
+        let toTest = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("WelcomeViewController") as! WelcomeViewController
+        toTest.name = "The really really really really clean swifter"
+        FBSnapshotVerifyView(toTest.view)
+    }
+
 }

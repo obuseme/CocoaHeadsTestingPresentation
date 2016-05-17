@@ -11,4 +11,25 @@ import XCTest
 
 class WelcomeViewControllerTests: XCTestCase {
 
+    func testViewDidLoad_SetsName_WhenNameIsProvided() {
+        class MockWelcomeViewController: WelcomeViewController {
+            let mockWelcomeLabel = UILabel()
+
+            override var welcomeLabel: UILabel! {
+                get {
+                    return mockWelcomeLabel
+                }
+                set {
+
+                }
+            }
+        }
+
+        let toTest = MockWelcomeViewController()
+        let name = "Andy"
+        toTest.name = name
+        toTest.viewDidLoad()
+        XCTAssertEqual("Welcome \(name)", toTest.welcomeLabel.text)
+    }
+
 }

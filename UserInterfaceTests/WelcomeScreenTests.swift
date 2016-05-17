@@ -11,4 +11,19 @@ import KIF
 
 class WelcomeScreenTests: KIFTestCase {
 
+    func testWelcomeFlow_SetsName_WhenNameProvided() {
+        let name = "Andy"
+        tester().clearTextFromAndThenEnterText("\(name)", intoViewWithAccessibilityLabel: "Name field")
+        tester().tapViewWithAccessibilityLabel("Save, and continue")
+        tester().waitForViewWithAccessibilityLabel("Welcome \(name)") as! UILabel
+        tester().tapViewWithAccessibilityLabel("Start Over")
+    }
+
+    func testWelcomeFlow_SetsName_WhenReallyLongNameProvided() {
+        let name = "The clean swifter"
+        tester().clearTextFromAndThenEnterText("\(name)", intoViewWithAccessibilityLabel: "Name field")
+        tester().tapViewWithAccessibilityLabel("Save, and continue")
+        tester().waitForViewWithAccessibilityLabel("Welcome \(name)") as! UILabel
+        tester().tapViewWithAccessibilityLabel("Start Over")
+    }
 }
